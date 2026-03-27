@@ -4,7 +4,7 @@ import time
 
 
 class FaceDetector:
-    def __init__(self, model_name="yolov8n.pt"):
+    def __init__(self, model_name="./weight/yolov8n-face-lindevs.pt"):
         """初始化检测器"""
         self.model = YOLO(model_name)
         self.cap = cv2.VideoCapture(0)
@@ -143,5 +143,5 @@ class FaceDetector:
 
 # 运行
 if __name__ == "__main__":
-    detector = FaceDetector(model_name="./yolov8n-face-lindevs.pt")
+    detector = FaceDetector(model_name="./weight/yolov8n-face-lindevs.pt")
     detector.run()
