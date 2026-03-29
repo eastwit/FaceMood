@@ -2,6 +2,35 @@
 
 一个基于深度学习的实时人脸表情识别系统，能够通过摄像头检测用户表情并给予语音反馈。
 
+## 快速开始
+
+按下面流程可以快速运行主程序 `facemood.py`：
+
+1. 安装依赖
+
+```bash
+git clone https://github.com/eastwit/FaceMood.git
+
+cd FaceMood
+
+pip install -r requirements.txt
+```
+
+2. 准备数据与权重
+
+- 将 `fer2013.csv` 放到 `data/` 目录
+- 将 `yolov8n-face-lindevs.pt` 和 `best_model_continued.pth` 放到 `weight/` 目录
+
+> 或者直接`git lfs pull`
+
+3. 运行实时表情识别（带语音反馈）
+
+```bash
+python facemood.py
+```
+
+运行后会打开摄像头，识别到稳定表情后自动语音播报；按 `Q` 键退出。
+
 ## 功能特性
 
 - **实时人脸检测**：使用 YOLOv8 模型进行快速准确的人脸检测
